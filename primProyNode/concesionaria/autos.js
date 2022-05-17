@@ -1,0 +1,48 @@
+let autos = [
+  {
+    marca: "Ford",
+    modelo: "Fiesta",
+    color: "azul",
+    anio: 2019,
+    km: 0,
+    precio: 150000,
+    cuotas: 12,
+    patente: "APL123",
+    vendido: false,
+  },
+  {
+    marca: "Toyoya",
+    modelo: "Corolla",
+    color: "blanco",
+    anio: 2019,
+    km: 95000,
+    precio: 10000,
+    cuotas: 14,
+    patente: "JJK116",
+    vendido: false,
+  },
+  {
+    marca: "Ford",
+    modelo: "Falcon",
+    color: "Bordo",
+    anio: 1974,
+    km: 99,
+    precio: 1000000,
+    cuotas: 24,
+    patente: "GRA888",
+    vendido: false,
+  },
+  {
+    marca: "Chevrolet",
+    modelo: "Chevy",
+    color: "Azul",
+    anio: 1986,
+    km: 160000,
+    precio: 100000,
+    cuotas: 20,
+    patente: "GWE653",
+    vendido: false,
+  },
+];
+
+module.exports = autos;

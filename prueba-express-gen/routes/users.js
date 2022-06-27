@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const userController =
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

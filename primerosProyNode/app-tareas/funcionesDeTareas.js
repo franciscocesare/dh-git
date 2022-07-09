@@ -5,9 +5,9 @@ let listaDeTareas = {
   readJSON: function () {
     return JSON.parse(fs.readFileSync(this.archivo, "utf-8"));
   },
-  writeJSON: function (tareas) {
-    fs.writeFileSync(this.archivo, JSON.stringify(tareas));
-  },
+  writeJSON: (tareas) => {  //se puede usar () => pero NO EL THIS!!!!
+    fs.writeFileSync("./tareas.json", JSON.stringify(tareas)); //aca tenia el this.archivo.
+  },  
   saveTask(tarea) {
     let arrayTareas = this.readJSON();
     arrayTareas.push(tarea); //sumo al array UNA tarea

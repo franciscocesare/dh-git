@@ -19,10 +19,8 @@
                     <h2 class="products-title">Basado en tu última visita</h2>
                 </div>
                 <!-- Show the "visited" products -->
+                <% for(let i=0; i < products.length; i++) { %> <% if (products[i].category=='visited' ) { %>
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <% for(let i=0; i < products.length; i++) { %> 
-					<% if (products[i].category=='visited') { %>
-
                     <section class="product-box">
                         <a href="/products/detail/<%= products[i].id %> ">
                             <figure class="product-box_image">
@@ -37,8 +35,8 @@
                             </article>
                         </a>
                     </section>
-                    <% } %> <% } %>
                 </div>
+                <% } %> <% } %>
             </div>
         </div>
         <!-- /ultima visita -->
@@ -50,8 +48,8 @@
                     <h2 class="products-title">Ofertas</h2>
                 </div>
                 <!-- Show the "in-sale" products -->
+                <% for(let i=0; i < products.length; i++) { %> <% if (products[i].category=='in-sale' ) { %>
                 <div class="col-12 col-sm-6 col-lg-3">
-                    <% for(let i=0; i < products.length; i++) { %> <% if (products[i].category=='in-sale' ) { %>
                     <section class="product-box">
                         <a href="/products/detail/<%= products[i].id %>">
                             <figure class="product-box_image">
@@ -65,8 +63,8 @@
                             </article>
                         </a>
                     </section>
-                    <% } %> <% } %>
                 </div>
+                <% } %> <% } %>
             </div>
         </div>
         <!-- /Ofertas -->

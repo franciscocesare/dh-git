@@ -1,0 +1,32 @@
+<html>
+    <h2>Editando el plato <%= plato.title %>
+    </h2>
+    <form method="POST" action="/products/<%= plato.id %>?_method=PUT" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<%= plato.id %> " />
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="title" value="<%= plato.title %>" placeholder="Enter name">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text-area" id="description" name="description" value="<%= plato.description %>"></input>
+        </div>
+        <div>
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" value="<%= plato.price %>" placeholder="Enter price">
+        </div>
+        <div>
+            <label for="stock">Moneda</label>
+            <input type="text" id="currency" name="currency" value="<%= plato.currency %>" placeholder="Enter currency">
+        </div>
+        <div>
+            <img src="/images/products/<%= plato.imageProduct %>" alt="">
+        </div>
+        <div>
+            <input type="file" id="image" name="imageProduct" value="<%= plato.imageProduct %>"
+                placeholder="Enter image">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</html>

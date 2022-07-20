@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ba2b92b1-0e5d-404b-ae96-fde835bbd2a6",
+    "title": "carpacioo",
+    "description": "carpaccio no me acuerdo con que",
+    "price": "22",
+    "currency": "$",
+    "imageProduct": "product-1657671657207-diego.png"
+  },
+  {
+    "id": "d698a48e-01ab-4f94-a8b3-395a8b727796",
+    "title": "Esparrrragos",
+    "description": "era con algo no cremoso los esparragos",
+    "price": "3",
+    "currency": "$",
+    "imageProduct": "product-1657584694338-esparragos.png"
+  },
+  {
+    "id": "06dce142-1e21-47e9-b2d9-3e9b7c9e7746",
+    "title": "mousse de arroz",
+    "description": "mouse de arroz no se que corno sera",
+    "price": "99",
+    "currency": "$",
+    "imageProduct": "product-1657584737435-Mousse-de-arroz-con-leche.jpg"
+  },
+  {
+    "id": "a49096a2-3662-4aa8-a8a9-a89337660574",
+    "title": "rissotto de berenjena",
+    "description": "rissoto de berenjena con queso de cabra",
+    "price": "999",
+    "currency": "$",
+    "imageProduct": "product-1657584765535-Risotto-berenjena-queso-cabra.jpg"
+  }
+]

@@ -1,5 +1,5 @@
 <html>
-    <form action="/product/create" method="post">
+    <form action="/products" method="post" enctype="multipart/form-data">
         <!-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> -->
         <div class="form-group">
             <label for="name">Name</label>
@@ -18,8 +18,8 @@
             <input type="text" class="form-control" id="currency" name="currency" placeholder="Enter currency">
         </div>
         <div class="form-group">
-            <label for="image">Image</label>
-            <input type="file" class="form-control" id="image" name="image" placeholder="Enter image">
+            <label for="imageProduct">Image</label>
+            <input type="file" class="form-control" id="imageProduct" name="imageProduct" multiple>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

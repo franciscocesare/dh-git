@@ -177,14 +177,14 @@
   },
   {
     "id": 17,
-    "name": "probandoooo",
+    "name": "probando con diego",
     "price": "1000",
     "discount": "10",
-    "description": "asdasdasd",
-    "category": "in-sale",
+    "description": "el diego no es una persona cualquiera",
     "image": [
-      "product-1658282057386-diego.png",
-      "product-1658282057386-diego4.jpeg"
+      "product-1658414811169-diego.png",
+      "product-1658414811170-diego2.jpg",
+      "product-1658414811170-diego3.jpeg"
     ]
   }
 ]

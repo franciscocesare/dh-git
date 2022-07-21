@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { validationResult } = require("express-validator"); //nos va a traer el resultado de las validaciones
 const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/productsDataBase.json");
@@ -16,7 +17,7 @@ const controller = {
     detail: (req, res) => {
         let id = req.params.id;
         let product = products.find((e) => e.id == id);
-        let priceDiscounted = product.price - (product.price * product.discount) / 100;
+        let priceDiscounted = (product.price - (product.price * product.discount) / 100).toFixed(2);
         res.render("detail", { product, priceDiscounted, toThousand });
     },
 
@@ -27,25 +28,33 @@ const controller = {
 
     // Create -  Method to store
     store: (req, res) => {
+        let errors = validationResult(req); // nos va a traer el resultado de las validacionesz
         let images = req.files;
+        if (!errors.isEmpty()) {
+            return res.render("product-create-form", {
+                errors: errors.mapped(), //le pasamos el array de errores, puede ser .array()
+                old: req.body,
+            });
+        }
         let product = {
             id: products.length + 1,
             name: req.body.name,
             price: req.body.price,
             discount: req.body.discount,
             description: req.body.description,
+            image: images.map((e) => e.filename),
         };
         if (images.length > 0) {
+            //console.log('imagenes');
             product.image = images.map((e) => e.filename);
         } else {
+          //  console.log('no imagenes');
             product.image = "no-image.jpg";
         }
-
-        // images ? (product.image = images.filename) : (product.image = 'not-image.jpg');
-
         products.push(product);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect("/products");
+
     },
 
     // Update - Form to edit
@@ -77,7 +86,7 @@ const controller = {
     destroy: (req, res) => {
         let id = req.params.id;
         let filtered = products.filter((e) => e.id != id);
-       // products = filtered;
+        // products = filtered;
         console.log(filtered);
         fs.writeFileSync(productsFilePath, JSON.stringify(filtered, null, 2));
         res.redirect("/products");
